@@ -1,0 +1,423 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: S1_R3_R4-AT3_PBE2
+meta:
+  id: wrk_242b1d85e0734364abc4601bc43b5419
+  created: 1775586818916
+  modified: 1775586818916
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_a956bc21121c4c289ecf61a536a72842
+      created: 1774974072405
+      modified: 1774979917608
+      sortKey: -1774974072406
+      description: ""
+    children:
+      - url: localhost:8000/produtos
+        name: criarProduto
+        meta:
+          id: req_36b53b3939424536ab5a54baa1a36505
+          created: 1774974123319
+          modified: 1774979301008
+          isPrivate: false
+          description: ""
+          sortKey: -1774974113604
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: nome
+              value: labubu justin
+            - name: valor
+              value: "00.00"
+              description: ""
+              disabled: false
+            - name: id
+              value: "1"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\49196930870\Downloads\labubuJapao.png
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/1
+        name: editarProduto
+        meta:
+          id: req_2dee06d2f0ca4a1bba0e257093571e79
+          created: 1774978734551
+          modified: 1774979474797
+          isPrivate: false
+          description: ""
+          sortKey: -1774969281715.5
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: nome
+              value: labubuvolei
+            - name: valor
+              value: "20.50"
+              description: ""
+              disabled: false
+            - name: id
+              value: "1"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\49196930870\Downloads\labubuVolei.png
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/
+        name: selecionarProduto
+        meta:
+          id: req_0023b62984934433bb9051cdf9f685b7
+          created: 1774979187611
+          modified: 1774983844502
+          isPrivate: false
+          description: ""
+          sortKey: -1774974113704
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produtos/2
+        name: deletarProduto
+        meta:
+          id: req_a3d8e4c0012d4e8291ab79d29b060909
+          created: 1774979377096
+          modified: 1774979383554
+          isPrivate: false
+          description: ""
+          sortKey: -1774969281615.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categorais
+    meta:
+      id: fld_4327b8a3e8814c9abb13844e1f0aa444
+      created: 1774979828863
+      modified: 1774979914505
+      sortKey: -1774979829063
+      description: ""
+    children:
+      - url: localhost:8000/categorias
+        name: selecionarCategoria
+        meta:
+          id: req_1f6417d4dea34c8fa2a3de13971c834f
+          created: 1774964236992
+          modified: 1774979895777
+          isPrivate: false
+          description: ""
+          sortKey: -1774979882148
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias
+        name: criarCategoria
+        meta:
+          id: req_fce3c95bb1694fdaa1878b3275ad8ee1
+          created: 1774964449827
+          modified: 1774979882136
+          isPrivate: false
+          description: ""
+          sortKey: -1774979882098
+        method: POST
+        body:
+          mimeType: application/json
+          text: '{ "nome": "Camisas labubonicas", "descricao": "Camisas oversized
+            labubonicas" }'
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/2
+        name: deletarCategoria
+        meta:
+          id: req_d30b9077fd8649be86e55b9768ea96b2
+          created: 1774965073668
+          modified: 1774979898417
+          isPrivate: false
+          description: ""
+          sortKey: -1774979882123
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/1
+        name: editarCategoria
+        meta:
+          id: req_ede7acf450994e02a6407d9d309f01b0
+          created: 1774965089742
+          modified: 1774979889722
+          isPrivate: false
+          description: ""
+          sortKey: -1774979882198
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Camisas tralaleronicas",
+              "descricao": "Camisas oversized labubonicas"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_b61c5a3a3d3142028c9b283972e30e82
+      created: 1775586836567
+      modified: 1775586840145
+      sortKey: -1775586836567
+      description: ""
+    children:
+      - url: localhost:8000/clientes/32
+        name: editarCliente
+        meta:
+          id: req_88b820815e2848e7bd3e20086463922f
+          created: 1775586841082
+          modified: 1776188841048
+          isPrivate: false
+          description: ""
+          sortKey: -1775586841082
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Marcia Rodrigues",
+              "cpf": "12345678909",
+              "telefone": "19987654321",
+              "cep": "13010100",
+              "numero": "123",
+              "complemento": "Apto 45"
+            }
+        parameters:
+          - name: idEndereco
+            value: "1"
+            description: ""
+            disabled: false
+          - name: idTelefone
+            value: "18"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes
+        name: selecionarCliente
+        meta:
+          id: req_a015447487864e2d81f0be33855f229f
+          created: 1776163318358
+          modified: 1776190341587
+          isPrivate: false
+          description: ""
+          sortKey: -1776163318358
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes
+        name: criarCliente
+        meta:
+          id: req_a97133d4c13b459b977c5f390d7dba67
+          created: 1776174854671
+          modified: 1776188824761
+          isPrivate: false
+          description: ""
+          sortKey: -1775283361640
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Carlos Eduardo Silva",
+              "cpf": "52998224725",
+              "telefone": "11987654321",
+              "cep": "01001000",
+              "numero": "123",
+              "complemento": "Apto 45"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/clientes/32
+        name: deletarCliente
+        meta:
+          id: req_1e0e782903b34f388e880058fd8175c5
+          created: 1776184449373
+          modified: 1776188833066
+          isPrivate: false
+          description: ""
+          sortKey: -1775435101361
+        method: DELETE
+        parameters:
+          - name: idEndereco
+            value: "1"
+            description: ""
+            disabled: false
+          - name: idTelefone
+            value: "18"
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_24589417e35a42ee8ecdb9743aaf2b12
+    created: 1774963984742
+    modified: 1774963984742
+environments:
+  name: Base Environment
+  meta:
+    id: env_551630e4a0c84f98bc4a608e51876ce7
+    created: 1774963984735
+    modified: 1774963984735
+    isPrivate: false
